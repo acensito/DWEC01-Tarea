@@ -1,0 +1,133 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<meta http-equiv="X-UA-Compatible" content="IE=edge">
+	<title>DWEC - Tarea 1 - Felipe Rodríguez Gutiérrez</title>
+	<style type="text/css">
+        html {
+            background-color: #e6e9e9;
+            -webkit-font-smoothing: antialiased !important;
+        }
+
+        body {
+            margin: 2em auto;
+            padding: 2em 2em 4em;
+            max-width: 800px;
+            font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
+            font-size: 16px;
+            line-height: 1.5em;
+            color: #545454;
+            background-color: #ffffff;
+            border-radius: 5px;
+        }
+        
+        p {
+            font-style: italic;
+        }
+
+	</style>
+</head>
+<body>
+	<h1>DWEC - Tarea 1 - Felipe Rodríguez Gutiérrez</h1>
+	<h2>Ejercicio 1:</h2>
+	<p>Compara dos números que se introducen desde teclado usando prompt. Escribir en pantalla el que sea mayor, menor o igual</p>
+
+	<script>
+		//Esta aplicación simplemente compara los dos números,	y dependiendo de dicha comparación, lanza un mensaje.
+		
+        //Solicitamos dos números con prompt, que volcaremos en dos variables con las que trabajaremos.
+		var num1 = prompt("Introduzca un número");
+		var num2 = prompt("Introduzca otro número");
+        
+        //Comprobamos si los valores introducidos son correctos...
+        //Si uno de los dos no fuera un número....
+        if (isNaN(num1) || isNaN(num2)) {
+            //Escribimos un mensaje de error.
+            document.write("** Uno de los valores introducidos es incorrecto ***");
+        //En el caso de que se hayan introducido los valores correctamente...
+        } else {
+            //Comparamos los valores
+            if (num1>num2) { //En el caso de ser el primero mayor que el segundo, lanza mensaje
+                document.write("** El numero " + num1 + " es mayor que el numero " + num2);
+            } else if (num1 = num2) { //En el caso de ser iguales ambos números, lanza mensaje
+                document.write("** Los números son iguales");
+            } else { //En el resto de casos, el segundo es mayor que el primero, lanza mensaje
+                document.write("** El numero " + num2 + " es mayor que el numero " + num1);
+            };
+        }
+	</script>
+
+	<h2>Ejercicio 2:</h2>
+	<p>Utilice prompt para crear un programa que te pida un número y que escriba en pantalla una cuenta atrás a cero desde ese número</p>
+	
+	<script>
+		//En esta aplicación, solicitaremos un número mediante el uso de prompt y recrearemos una cuenta atrás mediante un ciclo for
+
+		//Solicitamos el número...
+		cifra = prompt ("Introduzca un número");
+		//Creamos el ciclo. Desde el número introducido hasta cero, en pasos de uno menos cada ciclo.
+		for (var i = cifra; i >= 0; i--) {
+			//Vamos imprimiendo el número del ciclo con un espacio.
+			document.write(i + " ");
+		};
+	</script>
+
+    
+	<h2>Ejercicio 3:</h2>
+	<p>Muestre en pantalla los números múltiplos de 5 y de 11 desde 1 a 2000 pero en orden inverso. O sea debería terminar en 55</p>
+
+	<script>
+        var multiplo = 2000;
+
+        do {
+                if ((multiplo%55) === 0) {
+                        document.write(multiplo + " ");
+                };
+                multiplo--;
+        } while (multiplo !== 0);
+	</script>
+	
+	<h2>Ejercicio 4:</h2>
+	<p>Pida dos números por teclado y muestre el resultado de la división. Haga comprobaciones para evitar divisiones por 0.</p>
+	<script>
+        //En este ejercicio solicitaremos dos numeros y comprobaremos primero si lo son y si el divisor es distinto de 0
+        
+        //Nombramos las variables y las pedimos directamente por prompt
+		var num1 = prompt ("Introduzca un número");
+		var num2 = prompt ("Introduzca otro número");
+        
+        //Si 
+        if (isNaN(num1) || isNaN(num2) || num2 == 0) {
+            
+        }
+        // Hacemos la resta de los dos números. Se transformarán a decimal y se redondeará dos decimales
+		resultado = parseFloat(num1 - num2).toFixed(2);
+        // Escribimos en el documento el mensaje
+		document.write ("** El resultado de la resta de " + num1 + " menos " + num2 + " es " + resultado)
+	</script>
+
+    <!-- Aplicación de caso de uso de desplazamiento de bits a la derecha -->
+	<h2>Ejercicio 5:</h2>
+	<p>Utilice las operaciones &gt;&gt; y &lt;&lt; (operaciones de desplazamiento de operador) y las normales para realizar la división y multiplicación entre 300 y 40. Muestre el resultado en pantalla. Escriba en el código o en un mensaje en pantalla explicando que sucede.</p>
+	
+    <p>Mostramos 300 / 40 empleando operadores de desplazamiento de bits</p>
+    <script>
+
+		var resultadobits = (300 >> 5) + (300 >> 3);
+        var resultado = 300 / 40;
+        
+		document.write("** El resultado utilizando desplazamiento de bits sería " + resultadobits + "<br>");
+        document.write("** El resultado utilizando división sencilla sería " + resultado + "<br>");
+ 	</script>
+
+	<p>Mostramos 300 * 40 empleando operadores de desplazamiento de bits</p>
+	<script>
+		var resultadobits = (300 << 5) + (300 << 3);
+        var resultado = 300 * 40;
+        
+		document.write("** El resultado utilizando desplazamiento de bits sería " + resultadobits + "<br>");
+        document.write("** El resultado utilizando multiplicación sencilla sería " + resultado + "<br>");
+	</script>
+</body>
+</html>
