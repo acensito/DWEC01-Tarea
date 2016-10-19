@@ -1,4 +1,4 @@
-DWEC TAREA01
+# DWEC TAREA01
 ============
 
 En esta tarea se va a realizar la instalación y configuración de un entorno de trabajo para programar con JavaScript. 
@@ -10,12 +10,14 @@ Veamos paso a paso que es lo que debéis hacer:
 
 
 **Primera Parte.  (3.5 puntos).**
+
 Esta  se realizará en un documento que contenga las capturas (auntenticables).
-Buscar e instalar en tu sistema operativo al menos 2 navegadores web (adicionales al que ya tienes instalado por defecto).
-Buscar un editor de páginas web con soporte de JavaScript.
+
+ 1. Buscar e instalar en tu sistema operativo al menos 2 navegadores web (adicionales al que ya tienes instalado por defecto).
+ 2. Buscar un editor de páginas web con soporte de JavaScript.
 Instalar Firebug en Chrome y Firefox. ¿Se puede instalar en algún otro navegador?
-Además tendrás que explicar las razones por las que es conveniente tener, al menos, instalados 2 navegadores diferentes en tu ordenador y por qué has elegido tu editor web entre muchos otros. Razónalo.
-Para finalizar, usando la dirección de validación del W3C indicada en los apuntes, realiza la validación de la página de compra de videojuegos [humblebundle.com](https://www.humblebundle.com) e indica la solución solamente a 3 problemas distintos de los muchos que se presentan (las que quieras).
+ 3. Además tendrás que explicar las razones por las que es conveniente tener, al menos, instalados 2 navegadores diferentes en tu ordenador y por qué has elegido tu editor web entre muchos otros. Razónalo.
+ 4. Para finalizar, usando la dirección de validación del W3C indicada en los apuntes, realiza la validación de la página de compra de videojuegos [humblebundle.com](https://www.humblebundle.com) e indica la solución solamente a 3 problemas distintos de los muchos que se presentan (las que quieras).
 
  **Segunda Parte. (6.5 puntos).** 
 
