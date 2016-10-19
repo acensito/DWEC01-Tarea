@@ -24,6 +24,7 @@
         
         p {
             font-style: italic;
+            text-align: justify;
         }
 
 	</style>
@@ -68,7 +69,7 @@
 		cifra = prompt ("Introduzca un número");
 		//Creamos el ciclo. Desde el número introducido hasta cero, en pasos de uno menos cada ciclo.
 		for (var i = cifra; i >= 0; i--) {
-			//Vamos imprimiendo el número del ciclo con un espacio.
+			//Vamos imprimiendo el número del ciclo con un espacio de separación.
 			document.write(i + " ");
 		};
 	</script>
@@ -78,43 +79,57 @@
 	<p>Muestre en pantalla los números múltiplos de 5 y de 11 desde 1 a 2000 pero en orden inverso. O sea debería terminar en 55</p>
 
 	<script>
+        //Aqui iremos probando y mostrando los números múltiplos de 5 y 11 desde el 2000 hasta el 0.
+
+        //Definimos la variable con el valor inicial.
         var multiplo = 2000;
 
+        //Empezamos el ciclo, ira probando número a número hasta llegar a cero.
         do {
-                if ((multiplo%55) === 0) {
-                        document.write(multiplo + " ");
-                };
-                multiplo--;
+            //Si el numero en activo es divisible por 55 (o sea, es múltiplo)
+            if ((multiplo%55) === 0) {
+                //Muestra el número activo en ese momento con un espacio de separación
+                document.write(multiplo + " ");
+            };
+            //Pasamos al siguiente número
+            multiplo--;
         } while (multiplo !== 0);
 	</script>
 	
 	<h2>Ejercicio 4:</h2>
 	<p>Pida dos números por teclado y muestre el resultado de la división. Haga comprobaciones para evitar divisiones por 0.</p>
 	<script>
-        //En este ejercicio solicitaremos dos numeros y comprobaremos primero si lo son y si el divisor es distinto de 0
+        //En este ejercicio solicitaremos dos números y comprobaremos primero si lo son y si el divisor es distinto de 0
+        //Una vez efectuadas las mínimas comprobaciones, realizaremos una división entre los dos números introducidos.
         
         //Nombramos las variables y las pedimos directamente por prompt
 		var num1 = prompt ("Introduzca un número");
-		var num2 = prompt ("Introduzca otro número");
+        //Evitamos que se introduzca el valor 0. Si fuera así, se pide de nuevo un número
+        do {
+            var num2 = prompt ("Introduzca otro número distinto de cero");   
+        } while (num2 === 0);
+		
         
-        //Si 
-        if (isNaN(num1) || isNaN(num2) || num2 == 0) {
-            
+        //Si uno de los valores introducidos no es un número, abortamos la operación y lo indicamos
+        if (isNaN(num1) || isNaN(num2)) {
+            document.write ("** Uno de los números introducidos no es correcto");
+        } else {
+            // Hacemos la división de los dos números. El resultado se redondeará dos decimales
+           resultado = (num1 / num2).toFixed(2); 
         }
-        // Hacemos la resta de los dos números. Se transformarán a decimal y se redondeará dos decimales
-		resultado = parseFloat(num1 - num2).toFixed(2);
+		
         // Escribimos en el documento el mensaje
-		document.write ("** El resultado de la resta de " + num1 + " menos " + num2 + " es " + resultado)
+		document.write ("** El resultado de la división de " + num1 + " entre " + num2 + " es " + resultado)
 	</script>
 
-    <!-- Aplicación de caso de uso de desplazamiento de bits a la derecha -->
+
 	<h2>Ejercicio 5:</h2>
 	<p>Utilice las operaciones &gt;&gt; y &lt;&lt; (operaciones de desplazamiento de operador) y las normales para realizar la división y multiplicación entre 300 y 40. Muestre el resultado en pantalla. Escriba en el código o en un mensaje en pantalla explicando que sucede.</p>
 	
     <p>Mostramos 300 / 40 empleando operadores de desplazamiento de bits</p>
     <script>
 
-		var resultadobits = (300 >> 5) + (300 >> 3);
+		var resultadobits = (300 >> 5);
         var resultado = 300 / 40;
         
 		document.write("** El resultado utilizando desplazamiento de bits sería " + resultadobits + "<br>");
